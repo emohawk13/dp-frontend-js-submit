@@ -1,43 +1,25 @@
-// 1.
-const string = 'This is a string'
-const testNum = 190
+// 1. 
+const objectOne = {id: 1, name: 'Ryan'};
+const objectTwo = {address: "123 Fake St", phone:"555-555-5555"};
+const objectFinal = {...objectOne, ...objectTwo}
 
-console.log("Test if a String is a String.")
-console.log(typeof string === 'string');
-console.log(typeof testNum === 'string');
-// 2.
-const testString = ''
-const testString2 = ' '
-const testString3 = 'fjfjfj'
+console.log(objectFinal)
 
-function remoteEmptySpace(str) {
-    return str.trim() === '';
-}
-console.log("Test if a String is blank.")
-console.log(remoteEmptySpace(testString));
-console.log(remoteEmptySpace(testString2));
-console.log(remoteEmptySpace(testString3));
-// 3.
-const capFirst = 'dauhson';
-const capitalized = capFirst.charAt(0).toUpperCase() + capFirst.slice(1).toLowerCase();
-console.log("Capitalize the first letter of a string.")
-console.log(capitalized); 
-// 4.
-const fullName = 'Dauhson Capps'
-const nameSplit = fullName.split(" ");
-const firstName = nameSplit[0];
-const lastNameInitial = nameSplit[nameSplit.length - 1][0] + ".";
-const abbreviatedName = `${firstName} ${lastNameInitial}`;
+// 2. 
+const numberOne = 9;
+const numberTwo = 12;
 
-console.log('Program that abbreviates a full name.')
-console.log(abbreviatedName)
-// 5.
-const sentence = "I am a testing sentence";
-const maxLength = 5;
-const truncatedSentence = sentence.length > maxLength ? sentence.slice(0, maxLength) + "..." : sentence;
+console.log(numberOne > numberTwo ? numberOne : numberTwo);
 
-console.log(truncatedSentence)
-// 6. 
-const str = "The practitioners grappled on the road side!";
-const result = str.slice(str.indexOf("g"));
-console.log(result);
+// 3. 
+let sent = 'I am a sentence'
+let titleCaseSent = sent.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+console.log(titleCaseSent); 
+
+// 4. 
+let str = 'WOOO here is some other text for testing and other things';
+let sortedStr = str.split('').sort((a, b) => a.localeCompare(b)).join('');
+let capitalizedSortedStr = sortedStr.toUpperCase();
+
+console.log(capitalizedSortedStr);
