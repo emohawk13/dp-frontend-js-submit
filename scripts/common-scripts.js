@@ -1,5 +1,7 @@
 // First Challenge
 const person = {
+    //why?
+    "delete me": 1,
     id: 1138,
     name: "John Doe",
     age: 25,
@@ -7,15 +9,15 @@ const person = {
     gradesCompleted: [10, 11, 12],
     nestedObject: {
         address: {
-            city: "New York",
+        city: "New York",
             country: "USA"
         }
     },
-    "active": 1
+    // "delete me": 1,
 };
-console.log(`Person ${person.id} has been through grade ${person.gradesCompleted[2]}`);
+console.log(`Person ${person.id} has been through grade ${person.gradesCompleted.pop()}`);
 console.log("Original Object:", person);
-delete person["active"];
+delete person["delete me"];
 console.log("Object after deletion:", person);
 
 
@@ -47,34 +49,11 @@ console.log("User object:", user);
 
 
 // Third Challenge
-function NewObject(arr) {
-    this.array = arr;
-    this.index = 0;
-}
-
-NewObject.prototype.method = function () {
-    if (this.index % 2 === 0) {
-        if (this.array.length > 0) {
-            this.index++;
-            return this.array.shift();
-        } else {
-            return undefined;
-        }
-    } else {
-        if (this.array.length > 0) {
-            this.index++;
-            return this.array.pop();
-        } else {
-            return undefined;
-        }
-    }
-};
-
-const instance = new NewObject([1, 2, 3, 4, 5]);
-console.log("arrayOne =", instance.array);
-console.log("instance.method() =>", instance.method());
-console.log("instance.method() =>", instance.method());
-console.log("instance.method() =>", instance.method());
-console.log("instance.method() =>", instance.method());
-console.log("instance.method() =>", instance.method());
-console.log("instance.method() =>", instance.method());
+const arrayOne = [1,2,3,4,5]
+console.log(`Contents of ${arrayOne}`)
+console.log(arrayOne.shift())
+console.log(arrayOne.pop())
+console.log(arrayOne.shift())
+console.log(arrayOne.pop())
+console.log(arrayOne.shift())
+console.log(arrayOne.pop())
