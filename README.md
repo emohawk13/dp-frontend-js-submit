@@ -1,39 +1,57 @@
-Assignment - String Challenges
+Assignment - Data Structure Challenges
 
-Javascript uses the same coding foundations concepts as all other languages. In addition to completing the following in JavaScript consider solving some of the challenges in Python to notice the similarities and differences between the languages.
+1st Challenge
+Create an object. The created object should include:
 
-Write a program that checks if the input is a string.
-Check your program using the following examples:
+An initialized object
 
-isString("abc") => true
-isString(190) => false
+Instance of the Object Class
 
-Write a program that checks if a string is blank.
-Check your program using the following examples:
+Include meaningful test values for the following keys
+id
+name
+age
+dob
+grades completed (values should be in the form of an array)
 
-isBlankString("") => true
-isBlankString(" ") => true
-isBlankString("fjfjf") => false
+1 (one) nested object with another nested object.
 
-Write a program that capitalizes the first character of a string.
-Check your program using the following examples:
+1 (one) key should be called "delete me" with any value of your choice.
+Here is an example of what your output should include:
 
-capitalizeFirst("abcdef") = > "Abcdef"
+An output: "Person 1138 has been through grade 12, etc..."
+log the output
+log the object
+log the object after you have deleted the mistaken key
 
-Write a program that abbreviates a full name.
-Check your program using the following examples:
+2nd Challenge
+Create a "user" object with the following attributes:
+firstName: "your name"
+lastName: "your name"
+city: "your city"
+semesters (a nested object)
+semesterOne: "incomplete"
+semesterTwo: "incomplete"
+semesterThree: "incomplete"
+semesterFour: "incomplete"
 
-abbr("Ryan Curtis") => "Ryan C."
+Make the follow changes to the object using different functions:
+Change the applicable semesters to "complete".
+Delete the semesterFour attribute.
+To the first level of your object, add a "favoriteLanguage" attribute, and set it equal to a string with your favorite programming language.
 
-Write a program that will truncate a sentence after a given amount of characters.
-Check your program using the following examples:
+Log your user object after you've completed all of the processes
 
-truncate("I am a long sentence", 5) => "I am a..."
+3rd Challenge
+Write a program that alternatively removes a value from either the front or end of an array.
+Here is an example of the program's output:
+arrayOne = [1, 2, 3, 4, 5]
+            const instance = newObject([1, 2, 3, 4, 5])
+            instance.method() => 1
+            instance.method() => 5
+            instance.method() => 2
+            instance.method() => 4
+            instance.method() => 3
+            instance.method() => undefined (or) throw an error (or) do nothing
 
-Use slice to return from the "g" all the way to the end of the following sentence:
-const str="The practitioners grappled on the road side!"
-Output: "grappled on the road side!"
-Additional Practice: Refactor each program with a function.
 
-
-Provide a link to a github repository or repl in the field below.
