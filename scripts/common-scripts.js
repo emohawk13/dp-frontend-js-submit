@@ -1,59 +1,65 @@
-// First Challenge
-const person = {
-    //why?
-    "delete me": 1,
-    id: 1138,
-    name: "John Doe",
-    age: 25,
-    dob: "1999-05-15",
-    gradesCompleted: [10, 11, 12],
-    nestedObject: {
-        address: {
-        city: "New York",
-            country: "USA"
-        }
-    },
-    // "delete me": 1,
-};
-console.log(`Person ${person.id} has been through grade ${person.gradesCompleted.pop()}`);
-console.log("Original Object:", person);
-delete person["delete me"];
-console.log("Object after deletion:", person);
+// give an ice cream cone if they've picked a flavor and paid for it
+
+// const invStatus = false
+// const isPaidFor = true
+// const hasPicked = true
+
+// if (hasPicked && isPaidFor && !invStatus) {
+//     console.log("heres your ice cream")
+// } else {
+//     console.log("sorry your out of luck")
+// }
+
+// const myValue = 15;
+
+// if (myValue < 0) {
+//     console.log("This is True")
+// }else{
+//     console.log("This is False")
+// }
+
+// const age = 15
+// const ternary = age >= 16 ? "you can drive" : age < 14 && age < 16 ? "you can have a permit" : "sorry try in a couple of years"
+// console.log(ternary)
 
 
+// conditionals 1.
+// let lightStatus = 'yellow'
+
+// switch(lightStatus) {
+//     case 'green':
+//         console.log("Go")
+//         break
+//     case 'yellow':
+//         console.log("Proceed with caution.")
+//         break
+//     default:
+//         console.log("Stop")
+// }
+
+// // conditionals 2.
+// const username = 'admin'
+// const password = 'Pass12'
+
+// if (username === 'admin' && password === 'Pass123') {
+//     console.log('Login Successful. Welcome, Admin')
+// }else{
+//     console.log('Login Failed. Incorrect credentials')
+// }
 
 
+// conditionals 3. 
+const userRole = 'admin'
 
-// Second Challenge
-const user = {
-    firstName: "John",
-    lastName: "Doe",
-    city: "New York",
-    semesters: {
-        semesterOne: "incomplete",
-        semesterTwo: "incomplete",
-        semesterThree: "incomplete",
-        semesterFour: "incomplete"
-    }
-};
-
-user.semesters.semesterOne = "complete";
-user.semesters.semesterThree = "complete";
-delete user.semesters.semesterFour;
-user.favoriteLanguage = "JavaScript";
-console.log("User object:", user);
+switch(userRole) {
+    case 'admin':
+        console.log("Full access granted. Welcome, Admin!");
+        break;
+    case 'user':
+        console.log("Limited access granted. Welcome, User!");
+        break;
+    default:
+        console.log("Access denied. Unknown user role.");
+}
 
 
-
-
-
-
-// Third Challenge
-const arrayOne = [1,2,3,4,5]
-console.log(`Contents of ${arrayOne}`)
-console.log(arrayOne.shift())
-console.log(arrayOne.pop())
-console.log(arrayOne.shift())
-console.log(arrayOne.pop())
-console.log(arrayOne.shift())
-console.log(arrayOne.pop())
