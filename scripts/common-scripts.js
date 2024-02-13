@@ -1,45 +1,23 @@
-// 1.
-const string = 'This is a string'
-const testNum = 190
-
-console.log("Test if a String is a String.")
-console.log(typeof string === 'string');
-console.log(typeof testNum === 'string');
-// 2.
-const testString = ''
-const testString2 = ' '
-const testString3 = 'fjfjfj'
-
-function remoteEmptySpace(str) {
-    return str.trim() === '';
+// Write a program that counts to 10 by 2's
+console.log('Counting by 2\'s & 10\'s');
+console.log('');
+for (let i =0; i <=10; i += 2) {
+    console.log(i);
 }
-console.log("Test if a String is blank.")
-console.log(remoteEmptySpace(testString));
-console.log(remoteEmptySpace(testString2));
-console.log(remoteEmptySpace(testString3));
-// 3.
-const capFirst = 'dauhson';
-const capitalized = capFirst.charAt(0).toUpperCase() + capFirst.slice(1).toLowerCase();
-console.log("Capitalize the first letter of a string.")
-console.log(capitalized); 
-// 4.
-const fullName = 'Dauhson Capps'
-const nameSplit = fullName.split(" ");
-const firstName = nameSplit[0];
-const lastNameInitial = nameSplit[nameSplit.length - 1][0] + ".";
-const abbreviatedName = `${firstName} ${lastNameInitial}`;
 
-console.log('Program that abbreviates a full name.')
-console.log(abbreviatedName)
-// 5.
-const sentence = "I am a testing sentence";
-const maxLength = 5;
-const truncatedSentence = sentence.length > maxLength ? sentence.slice(0, maxLength) + "..." : sentence;
+// Write a program that extracts values form an array at specific indices and returns the values in a new array.
+// Here is an example of potential output: removeByIndex[‘a', 'b', 'c', 'd', 'f', 'f', 'e', 'f'], [1, 5]) => ['b', 'f']]
 
-console.log(truncatedSentence)
-// 6. 
-const str = "The practitioners grappled on the road side!";
-const result = str.slice(str.indexOf("g"));
-console.log(result);
 
+
+// Write a program that converts a number into an array of numbers. Ensure each element in the array is a number data type and NOT a string data type.
+// Here is an example of potential output: numToArray(12345) => [1, 2, 3, 4, 5]
+
+
+
+// Write a program to create a new matrix of arrays from two arrays of numbers and strings.
+// Here is an example of potential output:
+
+// arrayOne = [1, 2, 3]
+// arrayTwo =  ["a", "b", "c", "d"]
 
