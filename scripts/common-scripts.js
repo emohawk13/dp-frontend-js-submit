@@ -41,3 +41,5 @@ console.log(truncatedSentence)
 const str = "The practitioners grappled on the road side!";
 const result = str.slice(str.indexOf("g"));
 console.log(result);
+
+

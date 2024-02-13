@@ -1,39 +1,27 @@
-Assignment - String Challenges
+Assignment - Loops Challenges
 
-Javascript uses the same coding foundations concepts as all other languages. In addition to completing the following in JavaScript consider solving some of the challenges in Python to notice the similarities and differences between the languages.
+Use loops and previous coding foundation concepts to solve the following challenges in JavaScript. Note that no outisde libraries may be used to complete these challenges:
 
-Write a program that checks if the input is a string.
-Check your program using the following examples:
+Write a program that counts to 10 by 2's
 
-isString("abc") => true
-isString(190) => false
+Write a program that extracts values form an array at specific indices and returns the values in a new array.
+Here is an example of potential output: removeByIndex[‘a', 'b', 'c', 'd', 'f', 'f', 'e', 'f'], [1, 5]) => ['b', 'f']]
 
-Write a program that checks if a string is blank.
-Check your program using the following examples:
+Write a program that converts a number into an array of numbers. Ensure each element in the array is a number data type and NOT a string data type.
+Here is an example of potential output: numToArray(12345) => [1, 2, 3, 4, 5]
 
-isBlankString("") => true
-isBlankString(" ") => true
-isBlankString("fjfjf") => false
-
-Write a program that capitalizes the first character of a string.
-Check your program using the following examples:
-
-capitalizeFirst("abcdef") = > "Abcdef"
-
-Write a program that abbreviates a full name.
-Check your program using the following examples:
-
-abbr("Ryan Curtis") => "Ryan C."
-
-Write a program that will truncate a sentence after a given amount of characters.
-Check your program using the following examples:
-
-truncate("I am a long sentence", 5) => "I am a..."
-
-Use slice to return from the "g" all the way to the end of the following sentence:
-const str="The practitioners grappled on the road side!"
-Output: "grappled on the road side!"
-Additional Practice: Refactor each program with a function.
-
-
-Provide a link to a github repository or repl in the field below.
+Write a program to create a new matrix of arrays from two arrays of numbers and strings.
+Here is an example of potential output:
+arrayOne = [1, 2, 3]
+arrayTwo =  ["a", "b", "c", "d"]
+ 
+// OUTPUT: [
+    [1, 'a'], ['a', 1], [1, 'b'],
+    ['b', 1], [1, 'c'], ['c', 1],
+    [1, 'd'], ['d', 1], [2, 'a'],
+    ['a', 2], [2, 'b'], ['b', 2],
+    [2, 'c'], ['c', 2], [2, 'd'],
+    ['d', 2], [3, 'a'], ['a', 3],
+    [3, 'b'], ['b', 3], [3, 'c'],
+    ['c', 3], [3, 'd'], ['d', 3]
+]
