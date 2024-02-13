@@ -1,43 +1,40 @@
-// 1.
-const string = 'This is a string'
-const testNum = 190
+// Declare a function named calculateArea that takes two parameters, length and width, and returns the area of a rectangle. Call the function with values 8 and 5 and log the result to the console.
 
-console.log("Test if a String is a String.")
-console.log(typeof string === 'string');
-console.log(typeof testNum === 'string');
-// 2.
-const testString = ''
-const testString2 = ' '
-const testString3 = 'fjfjfj'
-
-function remoteEmptySpace(str) {
-    return str.trim() === '';
+function calculateArea(length, width) {
+    return length * width;
 }
-console.log("Test if a String is blank.")
-console.log(remoteEmptySpace(testString));
-console.log(remoteEmptySpace(testString2));
-console.log(remoteEmptySpace(testString3));
-// 3.
-const capFirst = 'dauhson';
-const capitalized = capFirst.charAt(0).toUpperCase() + capFirst.slice(1).toLowerCase();
-console.log("Capitalize the first letter of a string.")
-console.log(capitalized); 
-// 4.
-const fullName = 'Dauhson Capps'
-const nameSplit = fullName.split(" ");
-const firstName = nameSplit[0];
-const lastNameInitial = nameSplit[nameSplit.length - 1][0] + ".";
-const abbreviatedName = `${firstName} ${lastNameInitial}`;
 
-console.log('Program that abbreviates a full name.')
-console.log(abbreviatedName)
-// 5.
-const sentence = "I am a testing sentence";
-const maxLength = 5;
-const truncatedSentence = sentence.length > maxLength ? sentence.slice(0, maxLength) + "..." : sentence;
+var length = 8;
+var width = 5;
 
-console.log(truncatedSentence)
-// 6. 
-const str = "The practitioners grappled on the road side!";
-const result = str.slice(str.indexOf("g"));
-console.log(result);
+var area = calculateArea(length, width);
+console.log("The area of the rectangle with length " + length + " and width " + width + " is: " + area);
+
+
+// Write a function called greetUser that takes a parameter name and defaults to the string "User" if no value is provided. The function should return a greeting message. Call the function with and without providing a name and log the results.
+
+function greetUser(name = "User") {
+    return "Hello, " + name + "!";
+}
+
+console.log(greetUser());
+console.log(greetUser("Dude")); 
+
+
+// Declare a function expression using the arrow function syntax. The function should take two parameters, base and exponent, and return the result of raising the base to the power of the exponent. Call the function with values 2 and 3 and log the result.
+
+const doinSomeMath = (base, exponent) => {
+    return Math.pow(base, exponent);
+};
+
+console.log(doinSomeMath(2, 3));
+
+
+// Create an anonymous function expression that calculates the square of a given number. Assign this function expression to a variable called square. Use the square function to calculate the square of 9 and log the result.
+
+const square = function(number) {
+    return number * number;
+};
+
+console.log(square(9));
+
