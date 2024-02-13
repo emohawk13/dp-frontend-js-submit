@@ -1,99 +1,32 @@
 // Exercises
-// Given the array fruitsArray, use the .forEach() method to iterate over each fruit and log its name and index to the console.
-// const fruitsArray = ["apple", "banana", "orange", "grape", "kiwi"];
+// Declare an arrow function called greetUser that takes no parameters and implicitly returns the string "Welcome to the course!". Call the function and log the result to the console.
 
-const fruitsArray = ["apple", "banana", "orange", "grape", "kiwi"];
-
-fruitsArray.forEach((fruit, index) => {
-    console.log(`Index: ${index}, Fruit: ${fruit}`);
-});
-
-// Create an array originalNumbers containing five numbers. Use the .map() method to create a new array doubledNumbers where each number is doubled.
-// const originalNumbers = [3, 8, 12, 5, 7];
-// // Output: [6, 16, 24, 10, 14]
-
-const originalNumbers = [3, 8, 12, 5, 7];
-const doubledNumbers = originalNumbers.map(number => number * 2);
-console.log(doubledNumbers);
+const greetUser = () => "Welcome to the course!";
+console.log(greetUser());
 
 
-// Given the array mixedData, organize the data into separate arrays based on data type using conditionals, the typeof keyword, and the .forEach() method.
-// const mixedData = [42, "hello", ["world", 2023], () => "function", true, null, { key: "value" }];
-// /*
-// Output: 
-// {
-//   numbers: [42],
-//   strings: ['hello'],
-//   arrays: [['world', 2023]],
-//   functions: [() => 'function'],
-//   booleans: [true],
-//   objects: [{ key: 'value' }],
-//   nulls: [null]
-// }
-// */
+// Create an arrow function named doubleNumber that takes a single parameter num and returns the result of doubling that number. Call the function with the argument 7 and log the result.
 
-const mixedData = [42, "hello", ["world", 2023], () => "function", true, null, { key: "value" }];
+const doubleNumber = (num) => num * 2;
+console.log(doubleNumber(7));
 
-const organizedData = {
-  numbers: [],
-  strings: [],
-  arrays: [],
-  functions: [],
-  booleans: [],
-  objects: [],
-  nulls: []
-};
 
-mixedData.forEach(item => {
-  if (typeof item === "number") {
-    organizedData.numbers.push(item);
-  } else if (typeof item === "string") {
-    organizedData.strings.push(item);
-  } else if (Array.isArray(item)) {
-    organizedData.arrays.push(item);
-  } else if (typeof item === "function") {
-    organizedData.functions.push(item);
-  } else if (typeof item === "boolean") {
-    organizedData.booleans.push(item);
-  } else if (typeof item === "object" && item !== null) {
-    organizedData.objects.push(item);
-  } else if (item === null) {
-    organizedData.nulls.push(item);
-  }
-});
+// Declare an arrow function called cubeRoot that takes a single parameter x. Use the return keyword explicitly to return the cube root of the parameter.
 
-console.log(organizedData);
+const cubeRoot = (x) => {return Math.cbrt(x);};
+console.log(cubeRoot(27));
+
+
+// Create an arrow function named generateRandomNumber that takes no parameters and returns a random integer between 1 and 10 (inclusive). Call the function and log the result to the console.
+
+const generateRandomNumber = () => {return Math.floor(Math.random() * 10) + 1;};
+console.log(generateRandomNumber());
 
 
 
-// Create an array wordsArray containing three strings. Use the .map() method to create a new array uppercaseWords where each string is converted to uppercase.
-// const wordsArray = ["apple", "banana", "grape"];
-// // Output: ['APPLE', 'BANANA', 'GRAPE']
+// Declare an arrow function called calculateArea that takes two parameters length and width. Calculate and return the area (length * width) using the implicit return feature of arrow functions.
 
-const wordsArray = ["apple", "banana", "grape"];
-const uppercaseWords = wordsArray.map(word => word.toUpperCase());
-console.log(uppercaseWords);
-
-
-// Given the array matrix, use the .forEach() method to iterate over each sub-array and log the sum of its elements to the console.
-// const matrix = [
-//   [2, 4, 6],
-//   [1, 3, 5],
-//   [8, 10, 12]
-// ];
-// // Output:
-// // 12
-// // 9
-// // 30
-
-const matrix = [
-    [2, 4, 6],
-    [1, 3, 5],
-    [8, 10, 12]
-  ];
-  
-  matrix.forEach(row => {
-    const sum = row.reduce((acc, val) => acc + val, 0);
-    console.log(sum);
-  });
-  
+let width = 6;
+let length = 5;
+const calculateArea = (length, width) => length * width;
+console.log(calculateArea(length, width)); 
