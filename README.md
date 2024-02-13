@@ -1,39 +1,47 @@
-Assignment - String Challenges
+Assignment - Function Challenges
 
-Javascript uses the same coding foundations concepts as all other languages. In addition to completing the following in JavaScript consider solving some of the challenges in Python to notice the similarities and differences between the languages.
+Write a program that takes an array of words and returns the longest word.
+['a'. 'b', 'cc'] => 'cc'
 
-Write a program that checks if the input is a string.
-Check your program using the following examples:
+Write a program that swaps the first and last characters of a string.
+'ryan' => 'nyar'
 
-isString("abc") => true
-isString(190) => false
+Write a program that finds the sum of a list of numbers.
+[1, 2, 3] => 6
 
-Write a program that checks if a string is blank.
-Check your program using the following examples:
+Combine two arrays by alternatingly taking elements from each at every iteration.
+EX: [1, 2, 3], [4, 5, 6] => [1, 4, 2, 5, 3, 6]
 
-isBlankString("") => true
-isBlankString(" ") => true
-isBlankString("fjfjf") => false
+Create a title case program
+EX: "I am a sentence" => "I Am A Sentence"
 
-Write a program that capitalizes the first character of a string.
-Check your program using the following examples:
+Return longest word in a string
+EX: "This string has several different values" => "different"
 
-capitalizeFirst("abcdef") = > "Abcdef"
+Write a program that takes a string and returns the letters in alphabetical order
+EX: "Hi there" => "eehhirt"
 
-Write a program that abbreviates a full name.
-Check your program using the following examples:
-
-abbr("Ryan Curtis") => "Ryan C."
-
-Write a program that will truncate a sentence after a given amount of characters.
-Check your program using the following examples:
-
-truncate("I am a long sentence", 5) => "I am a..."
-
-Use slice to return from the "g" all the way to the end of the following sentence:
-const str="The practitioners grappled on the road side!"
-Output: "grappled on the road side!"
-Additional Practice: Refactor each program with a function.
+Write a program that returns extracted values from an array using specified indices and puts them into a new array.
+['a', 'b', 'c', 'd'], [1, 3] => ['b', 'd']
+['a', 'b', 'c', 'd'] is the original code.
+[1, 3] is the specified indices fo the array (index 1 and index 3)
+[b, d] is the new array returned from the specified indices.
 
 
-Provide a link to a github repository or repl in the field below.
+Complete the following steps:
+Create an object name 'user'. Give the object 2 (two) properties named userName and activeStatus
+the userName property should take any string value.
+the starter (or default) for the activeStatus property should be set to 'away'.
+
+Write an arrow function
+that changes the activeStatus to 'active'
+returns an interpolated string that contains the userName and activeStatus values.
+login(user) => 'ryan is active'
+
+Note: Use string interpolation. Avoid hardcoding this.
+
+
+Write a function that takes a base value and an exponent and will return the product (power).
+pow(4,2) => 16
+
+Note: No outside of pre-built functions and the '**' exponent operator is not allowed.
