@@ -1,23 +1,99 @@
-// Write a program that counts to 10 by 2's
-console.log('Counting by 2\'s & 10\'s');
-console.log('');
-for (let i =0; i <=10; i += 2) {
-    console.log(i);
-}
+// Exercises
+// Given the array fruitsArray, use the .forEach() method to iterate over each fruit and log its name and index to the console.
+// const fruitsArray = ["apple", "banana", "orange", "grape", "kiwi"];
 
-// Write a program that extracts values form an array at specific indices and returns the values in a new array.
-// Here is an example of potential output: removeByIndex[‘a', 'b', 'c', 'd', 'f', 'f', 'e', 'f'], [1, 5]) => ['b', 'f']]
+const fruitsArray = ["apple", "banana", "orange", "grape", "kiwi"];
+
+fruitsArray.forEach((fruit, index) => {
+    console.log(`Index: ${index}, Fruit: ${fruit}`);
+});
+
+// Create an array originalNumbers containing five numbers. Use the .map() method to create a new array doubledNumbers where each number is doubled.
+// const originalNumbers = [3, 8, 12, 5, 7];
+// // Output: [6, 16, 24, 10, 14]
+
+const originalNumbers = [3, 8, 12, 5, 7];
+const doubledNumbers = originalNumbers.map(number => number * 2);
+console.log(doubledNumbers);
+
+
+// Given the array mixedData, organize the data into separate arrays based on data type using conditionals, the typeof keyword, and the .forEach() method.
+// const mixedData = [42, "hello", ["world", 2023], () => "function", true, null, { key: "value" }];
+// /*
+// Output: 
+// {
+//   numbers: [42],
+//   strings: ['hello'],
+//   arrays: [['world', 2023]],
+//   functions: [() => 'function'],
+//   booleans: [true],
+//   objects: [{ key: 'value' }],
+//   nulls: [null]
+// }
+// */
+
+const mixedData = [42, "hello", ["world", 2023], () => "function", true, null, { key: "value" }];
+
+const organizedData = {
+  numbers: [],
+  strings: [],
+  arrays: [],
+  functions: [],
+  booleans: [],
+  objects: [],
+  nulls: []
+};
+
+mixedData.forEach(item => {
+  if (typeof item === "number") {
+    organizedData.numbers.push(item);
+  } else if (typeof item === "string") {
+    organizedData.strings.push(item);
+  } else if (Array.isArray(item)) {
+    organizedData.arrays.push(item);
+  } else if (typeof item === "function") {
+    organizedData.functions.push(item);
+  } else if (typeof item === "boolean") {
+    organizedData.booleans.push(item);
+  } else if (typeof item === "object" && item !== null) {
+    organizedData.objects.push(item);
+  } else if (item === null) {
+    organizedData.nulls.push(item);
+  }
+});
+
+console.log(organizedData);
 
 
 
-// Write a program that converts a number into an array of numbers. Ensure each element in the array is a number data type and NOT a string data type.
-// Here is an example of potential output: numToArray(12345) => [1, 2, 3, 4, 5]
+// Create an array wordsArray containing three strings. Use the .map() method to create a new array uppercaseWords where each string is converted to uppercase.
+// const wordsArray = ["apple", "banana", "grape"];
+// // Output: ['APPLE', 'BANANA', 'GRAPE']
+
+const wordsArray = ["apple", "banana", "grape"];
+const uppercaseWords = wordsArray.map(word => word.toUpperCase());
+console.log(uppercaseWords);
 
 
+// Given the array matrix, use the .forEach() method to iterate over each sub-array and log the sum of its elements to the console.
+// const matrix = [
+//   [2, 4, 6],
+//   [1, 3, 5],
+//   [8, 10, 12]
+// ];
+// // Output:
+// // 12
+// // 9
+// // 30
 
-// Write a program to create a new matrix of arrays from two arrays of numbers and strings.
-// Here is an example of potential output:
-
-// arrayOne = [1, 2, 3]
-// arrayTwo =  ["a", "b", "c", "d"]
-
+const matrix = [
+    [2, 4, 6],
+    [1, 3, 5],
+    [8, 10, 12]
+  ];
+  
+  matrix.forEach(row => {
+    const sum = row.reduce((acc, val) => acc + val, 0);
+    console.log(sum);
+  });
+  
