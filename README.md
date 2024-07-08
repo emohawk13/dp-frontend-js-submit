@@ -23,3 +23,7 @@ Here is an example of the output: "I am a sentence" => "I Am A Sentence"
 Write a program that takes a string and returns the letters in alphabetical order.
 Here is an example of the output: "Hi there" => "eeehhhirt"
 BONUS: Make the output represent the input characters (each character returns capitalized).
+
+// The spread function is a great option to placing object literals in a a single object literal. For an additional challenge, use a loop to access each key dynamically and set their key and value in the new object.
+
+// The lines with multiple methods together and be broken down into variables that indicate what value is desired from each line. This will help any developer look at your code and understand each part of the lines.

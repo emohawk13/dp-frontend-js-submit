@@ -1,0 +1,7 @@
+All challenges are properly answered. JS built-in blueprint methods and the spread syntax are utilized to create the proper data. Here some a few things to consider:
+
+1. The spread function is a great option to placing object literals in a a single object literal. For an additional challenge, use a loop to access each key dynamically and set their key and value in the new object. This did not affect your score.
+
+2. Your code properly works with several methods on one line. Though this is possible, because we work in a dev shop, we strive to make our code as explicit as possible. The lines with multiple methods together and be broken down into variables that indicate what value is desired from each line. This will help any developer look at your code and understand each part of the lines.
+
+Once this change has been made let me know and I will re-grade.
