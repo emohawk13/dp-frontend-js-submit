@@ -1,0 +1,48 @@
+@import "colors";
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $background-color;
+}
+
+.about {
+  .info {
+    h1 {
+      color: $text-color-2;
+    }
+  }
+}
+
+.project-container {
+  background-color: $project-container-background;
+  color: $text-color-1;
+  margin: 4% auto;
+  padding: 3%;
+  border: 1px solid black;
+  width: 80%;
+
+  .challenge1 {
+    background-color: $container-background-color-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4%;
+    width: 90%;
+  }
+
+  .challenge2 {
+    background-color: $container-background-color-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4%;
+    width: 90%;
+  }
+  .link {
+    color: $text-color-2;
+    text-decoration: none;
+  }
+}
