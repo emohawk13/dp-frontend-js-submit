@@ -1,40 +1,41 @@
-// Declare a function named calculateArea that takes two parameters, length and width, and returns the area of a rectangle. Call the function with values 8 and 5 and log the result to the console.
-
-function calculateArea(length, width) {
-    return length * width;
+// Check if Input is a String
+function isString(input) {
+  return typeof input === "string";
 }
 
-var length = 8;
-var width = 5;
-
-var area = calculateArea(length, width);
-console.log("The area of the rectangle with length " + length + " and width " + width + " is: " + area);
-
-
-// Write a function called greetUser that takes a parameter name and defaults to the string "User" if no value is provided. The function should return a greeting message. Call the function with and without providing a name and log the results.
-
-function greetUser(name = "User") {
-    return "Hello, " + name + "!";
+// Check if a String is Blank
+function isBlankString(str) {
+  return str.trim().length === 0;
 }
 
-console.log(greetUser());
-console.log(greetUser("Dude")); 
+// Capitalize the First Character of a String
+function capitalizeFirst(str) {
+  if (str.length === 0) return "";
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
+// Abbreviate a Full Name
+function abbr(fullName) {
+  let [firstName, lastName] = fullName.split(" ");
+  return `${firstName} ${lastName.charAt(0)}.`;
+}
 
-// Declare a function expression using the arrow function syntax. The function should take two parameters, base and exponent, and return the result of raising the base to the power of the exponent. Call the function with values 2 and 3 and log the result.
+// Truncate a Sentence After a Given Amount of Characters
+function truncate(sentence, num) {
+  if (sentence.length <= num) return sentence;
+  return sentence.slice(0, num) + "...";
+}
 
-const doinSomeMath = (base, exponent) => {
-    return Math.pow(base, exponent);
-};
+// Use Slice to Return from the "g" All the Way to the End of the Sentence
+const str = "The practitioners grappled on the road side!";
+const slicedStr = str.slice(str.indexOf("grappled"));
 
-console.log(doinSomeMath(2, 3));
-
-
-// Create an anonymous function expression that calculates the square of a given number. Assign this function expression to a variable called square. Use the square function to calculate the square of 9 and log the result.
-
-const square = function(number) {
-    return number * number;
-};
-
-console.log(square(9));
-
+console.log(isString("abc"));
+console.log(isString(190));
+console.log(isBlankString(""));
+console.log(isBlankString(" "));
+console.log(isBlankString("fjfjf"));
+console.log(capitalizeFirst("abcdef"));
+console.log(abbr("Ryan Curtis"));
+console.log(truncate("I am a long sentence", 5));
+console.log(slicedStr);
