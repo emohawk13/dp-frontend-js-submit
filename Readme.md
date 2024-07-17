@@ -1,13 +1,24 @@
-In coding foundations you learned about conditionals while completing the Magic 8-ball assignment. You can make similar programs using javascript. Some of the language may seem to directly translate from python to javascript. Some of the language will be completely new syntax that javascript requires. Fortunately, the coding foundational principles are the same and are used in the same programs.
+- Slot Machine Game
+  Completion requirements
+  Create your own slot machine game.
 
-Create a program that will play rock, paper, scissors.
+You design your own unique:
+rules for the game
+values for each combination
+how many reels are used to make combinations
+choose your own symbols
 
-Whiteboard all the possible variations for winning, losing, and draw. You might make a table to organize the results (like tables used to describe the result of two boolean expressions).
+Your game must include the following:
+a promise
+async funciton that awaits a promise
+a starting balance
+a betting system
+a continue playing option
+scoring system
+Here is an example of what your slot machine symbols could look like:
 
-Compare and contrast the Magic 8-ball assignment. What will be similar? What will be different?
+- & $
 
-Once you have written your working program, evaluate what parts are being repeated. How can you make your code DRY and not repeat any code?
+[ $ $ $ ] <--
 
-Note: Do NOT look up a completed version of this program online. Allow yourself the chance to work through each step. Ask for help in slack or work wiwth a partner if needed.
-
-Additional Practice: Create a webpage as a user interface. The end user should be able to both start the game and view the results. Stylize the interface with color, text, font, a layout, sizing and positioning.
+- - &
