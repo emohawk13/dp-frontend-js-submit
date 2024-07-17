@@ -1,29 +1,13 @@
-1st Challenge
-Create a mock user json object. It should include the following:
+In coding foundations you learned about conditionals while completing the Magic 8-ball assignment. You can make similar programs using javascript. Some of the language may seem to directly translate from python to javascript. Some of the language will be completely new syntax that javascript requires. Fortunately, the coding foundational principles are the same and are used in the same programs.
 
-At least 3 (three) users
-User objects should include the following data:
-Id
-Name
-Email
-Password
-Use an array method to log a templated user greeting for each user
-Here is an example output your progrma should create:
+Create a program that will play rock, paper, scissors.
 
-'Hello, ryan, your email is ryan@ryan.com'
+Whiteboard all the possible variations for winning, losing, and draw. You might make a table to organize the results (like tables used to describe the result of two boolean expressions).
 
-2nd Challenge
-In class we built an xmlhttprequest function. In this exercise you will "promisfy" the xmlhttprequest function (which means it will return a promise).
+Compare and contrast the Magic 8-ball assignment. What will be similar? What will be different?
 
-You promisified function will do the following:
-Appropriately resolve and reject that promise
-Store the promise in a variable
-Catch any errors
-Contain at least 2 (two) then statements
-1st then statement will log the data
-2nd then statement will log a specific data point
-Fetch data from the SWAPI API https://swapi.tech. (Documentation found at https://swapi.tech./documentation)
-Make the "promisfy" using dynamic features including:
-Alerts
-Prompts
-And any other dynamic feature we either covered or not covered in class.
+Once you have written your working program, evaluate what parts are being repeated. How can you make your code DRY and not repeat any code?
+
+Note: Do NOT look up a completed version of this program online. Allow yourself the chance to work through each step. Ask for help in slack or work wiwth a partner if needed.
+
+Additional Practice: Create a webpage as a user interface. The end user should be able to both start the game and view the results. Stylize the interface with color, text, font, a layout, sizing and positioning.

@@ -1,40 +1,59 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #3a3335;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #dcfaf1;
 }
 
-.about .info h1 {
-  color: #fdf0d5;
+h1 {
+  font-size: 3.5rem;
 }
 
-.project-container {
-  background-color: #892948;
-  color: #c6d8d3;
-  margin: 4% auto;
-  padding: 3%;
-  border: 1px solid black;
-  width: 80%;
+.choices {
+  margin-bottom: 30px;
 }
-.project-container .challenge1 {
-  background-color: #d81e5b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 4%;
-  width: 90%;
+.choices button {
+  color: #dcfaf1;
+  padding: 5%;
+  font-size: 2.5rem;
+  margin: 0 10px;
+  min-width: 160px;
+  border-radius: 250px;
+  background-color: green;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
 }
-.project-container .challenge2 {
-  background-color: #f0544f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 4%;
-  width: 90%;
+.choices button:hover {
+  background-color: rgb(4, 255, 4);
 }
-.project-container .link {
-  color: #fdf0d5;
-  text-decoration: none;
+
+.displays {
+  font-size: 1.5rem;
+  width: 50%;
+}
+.displays #resultsDisplay {
+  font-size: 3rem;
+  margin: 30px 0;
+}
+
+.score-display {
+  font-size: 2rem;
+}
+
+.result-win-color,
+#playerScoreDisplay {
+  color: green;
+}
+
+.result-tie-color,
+#tieScoreDisplay {
+  color: orange;
+}
+
+.result-lose-color,
+#computerScoreDisplay {
+  color: red;
 }/*# sourceMappingURL=common-styles.css.map */

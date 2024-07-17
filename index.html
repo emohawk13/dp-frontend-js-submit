@@ -9,66 +9,27 @@
 </head>
 
 <body>
-    <div class="about">
-        <div class="info">
-            <h1>Assignment - JSON Object Return</h1>
-        </div>
+    <h1>Rock - Paper - Scissors</h1>
+    <div id="choices" class="choices">
+        <button onclick="rpsPlay('Rock')"><img src="/assets/rock.jpg" alt="rock" height="100px" width="100px"></button>
+        <button onclick="rpsPlay('Paper')"><img src="/assets/paper.png" alt="paper" height="100px"
+                width="100px"></button>
+        <button onclick="rpsPlay('Scissors')"><img src="/assets/scissors.png" alt="scissors" height="100px"
+                width="100px"></button>
     </div>
-    <div class="project-container">
-        <h2>Challenge 1</h2>
-        <div class="instructions">
-            <p>Create a mock user json object. It should include the following:</p>
-            <ol>
-                <li>At least 3 User</li>
-                <li>User object should include the following data:</li>
-                <ul>
-                    <li>Id</li>
-                    <li>Name</li>
-                    <li>Email</li>
-                    <li>Password</li>
-                </ul>
-                <li>Use anyarray method to log a templated user greeting for each user</li>
-            </ol>
-        </div>
-        <div class="challenge1">
-            <div id="usersContainer"></div>
-        </div>
+
+    <div class="displays">
+        <div id="playerDisplay"></div>
+        <div id="computerDisplay"></div>
+        <div id="resultsDisplay"></div>
     </div>
-    <div class="project-container">
-        <h2>Challenge 2</h2>
-        <div class="instructions">
-            <p>In class we built an xmlhttprequest function. In this exercise you will "promisfy" the xmlhttprequest
-                function (which means it will return a promise).</p>
-            <ol>
-                <li>You promisified function will do the following:</li>
-                <ul>
-                    <li>Appropriately resolve and reject that promise</li>
-                    <li>Store the promise in a variable</li>
-                    <li>Catch any errors</li>
-                    <li>Contain at least 2 (two) then statements</li>
-                    <ul>
-                        <li>1st then statement will log the data</li>
-                        <li>2nd then statement will log a specific data point</li>
-                    </ul>
-                </ul>
-                <li>Fetch data from the SWAPI API <a href="https://swapi.tech/" target="_blank"
-                        class="link">https://swapi.tech.
-                        (Documentation found
-                        at https://swapi.tech./documentation)</a></li>
-                <li>Make the "promisfy" using dynamic features including:</li>
-                <ul>
-                    <li>Alerts</li>
-                    <li>Prompts</li>
-                    <li>And any other dynamic feature we either covered or not covered in class.</li>
-                </ul>
-            </ol>
-        </div>
-        <div class="challenge2">
-            <div id="swapiContainer"></div>
-        </div>
-    </div>
-    <script src="scripts/chal-1.js"></script>
-    <script src="scripts/chal-2.js"></script>
+
+    <div class="score-display">Player Score:<span id="playerScoreDisplay"> 0</span></div>
+    <div class="score-display">Computer Score:<span id="computerScoreDisplay"> 0</span></div>
+    <div class="score-display">Tie Total:<span id="tieScoreDisplay"> 0</span></div>
+    <div class="score-display">Total Games Played:<span id="totalScoreDisplay"> 0</span></div>
+
+    <script src="scripts/common-scripts.js"></script>
 </body>
 
 </html>
