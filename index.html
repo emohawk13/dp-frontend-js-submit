@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/common-styles.css">
+    <title>Virtual ATM</title>
+</head>
+
+<body>
+    <div class="atm-cover">
+        <div class=" line"></div>
+        <div class="container">
+            <h1>Automated Teller Machine</h1>
+            <hr>
+            <h2 id="blinkingDiv" class="menu-title">Main Menu</h2>
+            <div id="balanceDisplay"></div>
+            <div class="button-container">
+                <div class="button-group">
+                    <button onclick="viewBalance()">View Balance</button>
+                    <button onclick="withdraw()">Withdraw</button>
+                    <button onclick="deposit()">Deposit</button>
+                    <button onclick="exitProgram()">Exit Program</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/scripts/atm.js"></script>
+    <script src="/scripts/atm-controls.js"></script>
+    <script src="/scripts/common-scritps.js"></script>
+</body>
+
+</html>

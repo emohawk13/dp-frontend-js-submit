@@ -1,0 +1,73 @@
+@keyframes moveLines {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.atm-cover {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+}
+.atm-cover .line {
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(transparent, rgb(68, 68, 68), transparent);
+  position: absolute;
+  top: 0;
+  animation: moveLines 3s linear infinite;
+}
+.atm-cover h1 {
+  color: white;
+}
+.atm-cover .menu-title {
+  color: white;
+  text-align: center;
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+.atm-cover .container {
+  position: absolute;
+  z-index: 1;
+  left: 32%;
+  top: 25%;
+  padding: 2%;
+  background-color: rgb(4, 131, 4);
+}
+.atm-cover .container #balanceDisplay {
+  color: white;
+  padding: 10%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.atm-cover .container .button-container {
+  width: 30vw;
+}
+.atm-cover .container .button-container .button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+.atm-cover .container .button-container .button-group button {
+  background-color: green;
+  color: white;
+  padding: 10%;
+}
+.atm-cover .container .button-container .button-group button:hover {
+  background-color: rgb(18, 196, 18);
+}/*# sourceMappingURL=common-styles.css.map */

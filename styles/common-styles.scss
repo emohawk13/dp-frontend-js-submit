@@ -1,0 +1,69 @@
+@import "colors";
+@import "mixins";
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.atm-cover {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+
+  .line {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(
+      transparent,
+      rgb(68, 68, 68),
+      transparent
+    );
+    position: absolute;
+    top: 0;
+    animation: moveLines 3s linear infinite;
+  }
+  h1 {
+    color: $text-color;
+  }
+  .menu-title {
+    color: $text-color;
+    text-align: center;
+    animation: blink-animation 1s steps(5, start) infinite;
+  }
+  .container {
+    position: absolute;
+    z-index: 1;
+    left: 32%;
+    top: 25%;
+    padding: 2%;
+    background-color: $screen-backgorund;
+    #balanceDisplay {
+      color: $text-color;
+      padding: 10%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .button-container {
+      width: 30vw;
+      .button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+
+        button {
+          background-color: $button-color;
+          color: $text-color;
+          padding: 10%;
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+    }
+  }
+}
