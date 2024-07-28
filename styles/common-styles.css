@@ -1,73 +1,40 @@
-@keyframes moveLines {
-  0% {
-    transform: translateY(-100vh);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
 body,
 html {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: f0f0f0;
 }
 
-.atm-cover {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  overflow: hidden;
+.container {
+  display: flex;
+  width: 80%;
+  height: 500px;
+  justify-content: center;
 }
-.atm-cover .line {
-  width: 100%;
-  height: 100px;
-  background-image: linear-gradient(transparent, rgb(68, 68, 68), transparent);
-  position: absolute;
-  top: 0;
-  animation: moveLines 3s linear infinite;
+.container .col-formattting {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-width: 200px;
+  color: #000000;
 }
-.atm-cover h1 {
-  color: white;
+.container .col1 {
+  background-color: #ff9999;
 }
-.atm-cover .menu-title {
-  color: white;
-  text-align: center;
-  animation: blink-animation 1s steps(5, start) infinite;
+.container .col2 {
+  background-color: #99ff99;
 }
-.atm-cover .container {
-  position: absolute;
-  z-index: 1;
-  left: 32%;
-  top: 25%;
-  padding: 2%;
-  background-color: rgb(4, 131, 4);
+.container .col3 {
+  background-color: #9999ff;
 }
-.atm-cover .container #balanceDisplay {
-  color: white;
-  padding: 10%;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.atm-cover .container .button-container {
-  width: 30vw;
-}
-.atm-cover .container .button-container .button-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 100%;
-}
-.atm-cover .container .button-container .button-group button {
-  background-color: green;
-  color: white;
-  padding: 10%;
-}
-.atm-cover .container .button-container .button-group button:hover {
-  background-color: rgb(18, 196, 18);
+.container .color-code {
+  font-size: 1rem;
+  font-weight: bold;
 }/*# sourceMappingURL=common-styles.css.map */

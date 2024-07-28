@@ -1,22 +1,54 @@
-In Coding Foundations we created a virtual ATM program using python. Build a new virtual ATM machine or refactor your past code with the following:
+1st Challenge
+Your program should include the following:
 
-Refactor this using JS objects (OOP)
-Build pop up alerts
-Memory of the account stays throughout entire session (persists until refresh)
-Includes all CRUD (create, remove, get)
-Make sure each sub-menu can exit back to the main menu
-QA for errors including (but not limited to) withdrawing or depositing a negative value, withdrawing more money than in the account, etc.
-Here is an example of the main menu user interface for your program:
+At least 2 (two) classes. At least include the following classes:
+LinkList and Node
 
-Welcome
+Each of the node objects should have a pointer that connects to the next node.
 
----
+At least 3 (three) methods. You may make your own or choose from the following options:
+Return the first node
+Return the last node
+Pop the last node
+Clear all nodes
+ADDITIONAL PRACTICE: Mimic some of the array methods you have seen or can find online. Continue to expand your skills in these areas through research and experimentation.
 
-1 - View Balance
-2 - Withdraw
-3 - Deposit
-4 - Exit Program
+2nd Challenge
+Navigate to google.com and search any topic. Open the console and use JS to grab every tag on the document.
+ADDITIONAL PRACTICE: Loop through and log each individual tag.
 
-BONUS: Create a portion of the program that will print a receipt of each transaction completed by the ATM.
+3rd Challenge
+The true power of front-end development occurs when HTML, CSS and JS are coded into the same program. Because each has its unique purpose we can solve more complex challenges when they synchronize. In this challenge you will place text using JS into a table already created and styled using HTML and CSS.
+
+Complete the following steps in HTML:
+
+Create a table with one row and three columns on the starter code provided below.
+Add the appropriate HTML strucutre to the starter code to achieve the desired layout.
+Center the row on the top of the page. Set to the desired height and width.
+
+Complete the following steps in CSS:
+
+Set each of the 3 (three) created columns in your layout to have a different:
+Background color
+Text color
+NOTE: If desired, use the color picker applications discussed in the lesson CSS Overview.
+
+Complete the following steps in JS:
+
+Add the background color hex code value as text in each of the three available cells.
+
+Here is a starter HTML body template to structure your program Make sure to use a proper boilerplate and to link to the CSS and JS files:
+
+<div class="container">
+
+<!-- Code Goes Here -->
+
+  <div class="col1"></div>
+
+  <div class="col2"></div>
+
+  <div class="col3"></div>
+
+</div>
 
 Provide a link to a git repository or codepen in the field below:
