@@ -1,9 +1,11 @@
+@import "colors";
+
 #navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #333;
-  color: #fff;
+  color: $nav-text-color;
   position: fixed;
   top: 0;
   width: 100%;
@@ -25,7 +27,7 @@
 }
 
 #nav-links a {
-  color: #fff;
+  color: $nav-text-color;
   text-decoration: none;
 }
 
@@ -38,7 +40,7 @@
 .menu-icon .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: $nav-text-color;
   margin: 3px 0;
   padding-left: 5%;
 }
@@ -50,37 +52,18 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #333;
+    background-color: $nav-background-color;
     width: 100%;
+    li {
+      padding: 2%;
+    }
   }
-  #nav-links li {
-    padding: 2%;
-  }
+
   #nav-links.active {
     display: flex;
   }
+
   #menu-toggle {
     display: flex;
   }
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  padding-top: 60px;
-}
-
-#heading-container {
-  padding-top: 2%;
-  text-align: center;
-}
-#heading-container h1,
-#heading-container h2,
-#heading-container h3,
-#heading-container h4,
-#heading-container h5,
-#heading-container h6 {
-  color: #333;
-  margin: 10px 0;
-}/*# sourceMappingURL=common-styles.css.map */

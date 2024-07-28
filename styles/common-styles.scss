@@ -1,46 +1,25 @@
+@import "navbar";
 @import "colors";
 
-body,
-html {
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: $background-color;
+  padding-top: 60px;
 }
 
-.container {
-  display: flex;
-  width: 80%;
-  height: 500px;
-  justify-content: center;
+#heading-container {
+  padding-top: 2%;
+  text-align: center;
 
-  .col-formattting {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    min-width: 200px;
-    color: $text-color;
-  }
-  .col1 {
-    background-color: $col-color1;
-  }
-
-  .col2 {
-    background-color: $col-color2;
-  }
-
-  .col3 {
-    background-color: $col-color3;
-  }
-
-  .color-code {
-    font-size: 1rem;
-    font-weight: bold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading-color;
+    margin: 10px 0;
   }
 }
