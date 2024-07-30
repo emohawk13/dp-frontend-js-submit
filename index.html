@@ -4,33 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Navigation Bar</title>
-    <link rel="stylesheet" href="styles/common-styles.css">
+    <link rel="stylesheet" href="/styles/common-styles.css">
+    <title>Event Listner Challenge</title>
 </head>
 
 <body>
-    <nav id="navbar">
-        <div id="logo">
-            <img src="https://st2.depositphotos.com/4035913/6124/i/950/depositphotos_61243733-stock-illustration-business-company-logo.jpg"
-                alt="Logo">
+    <div class="container">
+        <h1 id="dynamic-header"></h1>
+        <div id="color-box" class="color-box"></div>
+        <input type="text" id="text-input" placeholder="Give this a header!" class="input-max-50">
+        <div class="button-group">
+            <button id="change-color" class="button-group">Change Color</button>
+            <button id="delete-header" class="button-group">Delete Header</button>
         </div>
-        <div id="menu-toggle" class="menu-icon">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div id="heading-container"></div>
-
-    <script src="scripts/challenge_1.js"></script>
-    <script src="scripts/nav.js"></script>
+    </div>
+    <script src="/scripts/commonScripts.js"></script>
+    <script src="/scripts/hexScript.js"></script>
 </body>
 
 </html>

@@ -1,25 +1,71 @@
-@import "navbar";
-@import "colors";
-
+html,
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: Arial, sans-serif;
-  background-color: $background-color;
-  padding-top: 60px;
+  background-color: antiquewhite;
 }
 
-#heading-container {
-  padding-top: 2%;
-  text-align: center;
+.container {
+  margin-top: 20%;
+  border: 1px solid black;
+  box-shadow: 15px 15px 15px rgb(85, 85, 85);
+  height: auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: auto;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $heading-color;
-    margin: 10px 0;
+h1 {
+  margin-bottom: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.color-box {
+  width: 80%;
+  height: 300px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.input-max-50 {
+  width: 90%;
+  height: 2rem;
+}
+
+.button-group {
+  display: flex;
+  padding-top: 5%;
+  gap: 10px;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background: antiquewhite;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background: #e5e5e5;
+    outline: none;
+    box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.527);
   }
 }
