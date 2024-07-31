@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/common-styles.css">
-    <title>Event Listner Challenge</title>
+    <link rel="stylesheet" href="styles/common-styles.css">
+    <title>Random Student Name Generator</title>
 </head>
 
 <body>
     <div class="container">
-        <h1 id="dynamic-header"></h1>
-        <div id="color-box" class="color-box"></div>
-        <input type="text" id="text-input" placeholder="Give this a header!" class="input-max-50">
-        <div class="button-group">
-            <button id="change-color" class="button-group">Change Color</button>
-            <button id="delete-header" class="button-group">Delete Header</button>
-        </div>
+        <aside class="sidebar">
+            <h2 id="myName">Fetching...</h2>
+            <ul id="user-list">
+            </ul>
+        </aside>
+        <main class="main-section">
+            <h1>Student Randomizer</h1>
+            <p id="placeholder">Push the button to get a random student.</p>
+            <button id="randomizer">Randomize</button>
+        </main>
     </div>
     <script src="/scripts/commonScripts.js"></script>
-    <script src="/scripts/hexScript.js"></script>
 </body>
 
 </html>

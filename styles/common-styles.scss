@@ -1,71 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import "colors";
+
 html,
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: $primary-background-color;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
-  background-color: antiquewhite;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  margin-top: 20%;
-  border: 1px solid black;
-  box-shadow: 15px 15px 15px rgb(85, 85, 85);
-  height: auto;
-  width: 100%;
-  max-width: 800px;
-  padding: 10%;
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  height: 80vh;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.527);
+
+  .sidebar {
+    width: 30%;
+    background-color: $side-bar-background;
+    color: $text-color-secondary;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    #user-list {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      li {
+        margin: 10px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 5px;
+        width: 100%;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      li:hover {
+        background-color: $selected-user-colo;
+      }
+      li.highlighted {
+        background-color: $selected-user-colo;
+      }
+    }
+  }
+}
+
+.main-section {
+  width: 70%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: white;
-  overflow: auto;
-}
+  align-items: center;
+  background-color: $main-container-color;
+  box-shadow: inset 0 0 10px $shadow-color;
 
-h1 {
-  margin-bottom: 20px;
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+  #placeholder {
+    font-size: 1.2rem;
+    color: $text-color-primary;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 50px;
+  }
 
-.color-box {
-  width: 80%;
-  height: 300px;
-  border: 1px solid #000;
-  margin-bottom: 20px;
-  transition: background-color 0.5s ease;
-}
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
-.input-max-50 {
-  width: 90%;
-  height: 2rem;
-}
-
-.button-group {
-  display: flex;
-  padding-top: 5%;
-  gap: 10px;
-}
-
-button {
-  width: 150px;
-  height: 50px;
-  background: antiquewhite;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    background: #e5e5e5;
-    outline: none;
-    box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.527);
+    &:hover {
+      background-color: $button-hover;
+      box-shadow: 0 4px 6px $shadow-color;
+    }
   }
 }

@@ -1,41 +1,86 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".container");
-  let header = document.getElementById("dynamic-header");
-  const input = document.getElementById("text-input");
+document.addEventListener("DOMContentLoaded", () => {
+  const apiUrl = "https://fe-students.onrender.com/api/users";
+  const userList = document.getElementById("user-list");
+  const placeholder = document.getElementById("placeholder");
+  const myName = document.getElementById("myName");
+  const randomizerButton = document.getElementById("randomizer");
 
-  function updateHeader() {
-    if (header && input) {
-      header.textContent = input.value;
+  let users = [];
+  let selectedUser = null;
 
-      if (input.value.length > 50) {
-        input.disabled = true;
+  async function fetchUsers() {
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      users = data.results;
+      populateUserList(users);
+      fetchName();
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  }
+
+  async function fetchName() {
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      const user = data.results.find((user) => user.name === "Dauhson Capps");
+      if (user) {
+        myName.innerHTML = `Hello,<br>${user.name}`;
+      } else {
+        myName.textContent = "User not found";
       }
-    } else if (input) {
-      header = document.createElement("h1");
-      header.id = "dynamic-header";
-      header.textContent = input.value;
-      container.insertBefore(header, document.querySelector(".color-box"));
+    } catch (error) {
+      console.error("Error fetching name:", error);
+      myName.textContent = "Error fetching name";
     }
   }
 
-  function deleteHeader() {
-    if (header) {
-      header.remove();
-      header = null;
+  function populateUserList(users) {
+    userList.innerHTML = users
+      .map((user) => `<li data-id="${user.id}">${user.name}</li>`)
+      .join("");
+  }
+
+  userList.addEventListener("click", (event) => {
+    if (event.target.tagName === "LI") {
+      selectUser(event.target);
+    }
+  });
+
+  randomizerButton.addEventListener("click", () => {
+    if (users.length) {
+      const randomUser = users[Math.floor(Math.random() * users.length)];
+      placeholder.textContent = randomUser.name;
+      selectUserFromList(randomUser.id);
+    }
+  });
+
+  function selectUserFromList(userId) {
+    const listItems = userList.querySelectorAll("li");
+    listItems.forEach((li) => {
+      if (li.dataset.id === userId) {
+        li.classList.add("highlighted");
+        placeholder.textContent = li.textContent;
+      } else {
+        li.classList.remove("highlighted");
+      }
+    });
+  }
+
+  function selectUser(element) {
+    const listItems = userList.querySelectorAll("li");
+    listItems.forEach((li) => li.classList.remove("highlighted"));
+
+    if (element) {
+      element.classList.add("highlighted");
+      placeholder.textContent = element.textContent;
+    } else {
+      placeholder.textContent = "Select a user to display their name here.";
     }
 
-    if (input) {
-      input.value = "";
-      input.disabled = false;
-    }
+    selectedUser = element ? element.dataset.id : null;
   }
 
-  if (input) {
-    input.addEventListener("input", updateHeader);
-  }
-
-  const deleteButton = document.getElementById("delete-header");
-  if (deleteButton) {
-    deleteButton.addEventListener("click", deleteHeader);
-  }
+  fetchUsers();
 });
