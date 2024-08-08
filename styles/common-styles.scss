@@ -51,13 +51,42 @@ body {
         width: 100%;
         border-radius: 4px;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       li:hover {
-        background-color: $selected-user-colo;
+        background-color: $selected-user-color;
       }
       li.highlighted {
-        background-color: $selected-user-colo;
+        background-color: $selected-user-color;
+      }
+
+      .weight-buttons {
+        display: flex;
+        gap: 5px;
+
+        button {
+          background-color: transparent;
+          border: 1px solid $button-border-color;
+          border-radius: 3px;
+          padding: 3px 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $button-hover;
+          }
+
+          &.increase {
+            color: green;
+          }
+
+          &.decrease {
+            color: red;
+          }
+        }
       }
     }
   }

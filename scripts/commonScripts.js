@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const randomizerButton = document.getElementById("randomizer");
 
   let users = [];
+  let weights = {};
   let selectedUser = null;
 
   async function fetchUsers() {
@@ -38,8 +39,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function populateUserList(users) {
     userList.innerHTML = users
-      .map((user) => `<li data-id="${user.id}">${user.name}</li>`)
+      .map((user) => {
+        weights[user.id] = 1;
+        return `
+          <li data-id="${user.id}">
+            ${user.name}
+            <span class="weight">${weights[user.id]}</span>
+            <div class="weight-buttons">
+              <button class="decrease" data-id="${
+                user.id
+              }" data-change="-1">-</button>
+              <button class="increase" data-id="${
+                user.id
+              }" data-change="1">+</button>
+            </div>
+          </li>
+        `;
+      })
       .join("");
+    addEventListenersToButtons();
+  }
+
+  function addEventListenersToButtons() {
+    const increaseButtons = document.querySelectorAll(".increase");
+    const decreaseButtons = document.querySelectorAll(".decrease");
+
+    increaseButtons.forEach((button) => {
+      button.addEventListener("click", () =>
+        changeWeight(button.dataset.id, parseInt(button.dataset.change))
+      );
+    });
+
+    decreaseButtons.forEach((button) => {
+      button.addEventListener("click", () =>
+        changeWeight(button.dataset.id, parseInt(button.dataset.change))
+      );
+    });
+  }
+
+  function changeWeight(userId, change) {
+    const userElement = document.querySelector(`li[data-id="${userId}"]`);
+    const weightElement = userElement.querySelector(".weight");
+    let currentWeight = parseInt(weightElement.textContent);
+    currentWeight = Math.max(1, currentWeight + change);
+    weightElement.textContent = currentWeight;
+    weights[userId] = currentWeight;
   }
 
   userList.addEventListener("click", (event) => {
@@ -50,7 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   randomizerButton.addEventListener("click", () => {
     if (users.length) {
-      const randomUser = users[Math.floor(Math.random() * users.length)];
+      const weightedUsers = users.flatMap((user) =>
+        Array(weights[user.id]).fill(user)
+      );
+      const randomUser =
+        weightedUsers[Math.floor(Math.random() * weightedUsers.length)];
       placeholder.textContent = randomUser.name;
       selectUserFromList(randomUser.id);
     }
@@ -61,7 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
     listItems.forEach((li) => {
       if (li.dataset.id === userId) {
         li.classList.add("highlighted");
-        placeholder.textContent = li.textContent;
+        const name = li.childNodes[0].nodeValue.trim();
+        placeholder.textContent = name;
       } else {
         li.classList.remove("highlighted");
       }
@@ -74,7 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (element) {
       element.classList.add("highlighted");
-      placeholder.textContent = element.textContent;
+      const name = element.childNodes[0].nodeValue.trim();
+      placeholder.textContent = name;
     } else {
       placeholder.textContent = "Select a user to display their name here.";
     }

@@ -31,3 +31,16 @@ Here is the API Endpoint for your use: GET: https://fe-students.onrender.com/api
 
 ADDITIONAL PRACTICE: Weight the list of users. Add buttons in a way that adds and removes weight from each user. Create a legend or key that explains the weight system including how to gain or lose weight.
 Provide a link to a git repository in the field below:
+
+refactor comments:
+The code provided fetches all names from the backend server and uses them in the application.
+
+The code then randomly selects a user when you click the blue button.
+
+All variables, functions and event listeners are organized. JS uses arrays.
+
+Make sure to change all data type mentions of lists to arr or arrays.
+
+The capstone asks for a weight system. Each person has a number and buttons to increase or decrease that number.
+
+This should increase or decrease their chance of being chosen. Once these changes have been made we will re-grade.
