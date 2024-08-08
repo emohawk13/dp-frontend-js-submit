@@ -35,5 +35,13 @@ const str="The practitioners grappled on the road side!"
 Output: "grappled on the road side!"
 Additional Practice: Refactor each program with a function.
 
-
 Provide a link to a github repository or repl in the field below.
+
+refactor comments:
+All exercises are properly solved. Methods, conditional and loops are used to provide the desired result. Even a recursive function was used in the last challenge. Here are a few things to consider.
+
+1. data structures with the declaration const can still have elements, key/values, etc. changed. Unless your code will change the data type of the data structure, it is best to declare with a const.
+
+2. You use several for loops that properly perform the intended purpose. There are several loops in the code base that can use for of loops in their place. This will make the code more readable.
+
+3. The alphabetical order challenge uses regular expression in its code base. Currently, there are many methods being used on the same line. To make sure your code explains itself, it can be best to split the methods into several lines. If a new variable is created, the variable name can help developers in the dev shop understand and work on the code.
